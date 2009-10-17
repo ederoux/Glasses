@@ -22,7 +22,17 @@
 #import "NSScreen_Additions.h"
 
 @implementation VLCExtendedVideoView
-@synthesize mediaPlayer=_mediaPlayer;
+
+- (VLCMediaPlayer*) mediaPlayer
+{
+    return _mediaPlayer;
+}
+
+- (void) setMediaPlayer:(VLCMediaPlayer *) mp
+{
+    _mediaPlayer = mp;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayError:) name:@"VLCMediaPlayerNoSignalNotification" object:nil];
+}
 
 - (BOOL)acceptsFirstResponder
 {
@@ -37,5 +47,16 @@
 - (BOOL)isOpaque
 {
     return YES;
+}
+
+- (void)displayError:(NSNotification *)aNotification
+{
+    NSView * VLCOpenGLVoutView = [[self subviews] objectAtIndex:0];
+    NSImageView * errorView = [[NSImageView alloc] initWithFrame:[VLCOpenGLVoutView frame]];
+    [errorView setBounds:[VLCOpenGLVoutView bounds]];
+    NSImage * errorImage = [NSImage imageNamed:@"errorImage.svg"];
+    [errorView setImage:errorImage];
+    [self replaceSubview:VLCOpenGLVoutView with:errorView];
+    [errorView release];
 }
 @end

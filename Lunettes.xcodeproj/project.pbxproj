@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3222CB9C10498BE300D4708C /* hud.js in Resources */ = {isa = PBXBuildFile; fileRef = 3222CB9A10498BD300D4708C /* hud.js */; };
+		3270EE151088BCD700B1424E /* errorImage.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3270EE141088BCD700B1424E /* errorImage.svg */; };
 		329965CE10496F2800EF342B /* dom-drag.js in Resources */ = {isa = PBXBuildFile; fileRef = 329965CD10496F1100EF342B /* dom-drag.js */; };
 		6301425E10406A7700534090 /* VLCExtendedVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6311DA550FF85980004BC7D1 /* VLCExtendedVideoView.m */; };
 		630143AB1040726600534090 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630143AA1040726600534090 /* WebKit.framework */; };
@@ -239,6 +240,7 @@
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		3222CB9A10498BD300D4708C /* hud.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = hud.js; path = Resources/Style/Default/hud.js; sourceTree = "<group>"; };
+		3270EE141088BCD700B1424E /* errorImage.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = errorImage.svg; sourceTree = "<group>"; };
 		329965CD10496F1100EF342B /* dom-drag.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "dom-drag.js"; path = "Resources/Style/Default/dom-drag.js"; sourceTree = "<group>"; };
 		630141D5104062B300534090 /* Common Settings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Common Settings.xcconfig"; sourceTree = "<group>"; };
 		630143AA1040726600534090 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -638,6 +640,7 @@
 		6311DAAC0FF85AC0004BC7D1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3270EE141088BCD700B1424E /* errorImage.svg */,
 				639F64821046BE2B00117832 /* lunettes.png */,
 				6311DB310FF85BE3004BC7D1 /* fullscreen_active.png */,
 				6311DB320FF85BE3004BC7D1 /* fullscreen_blue.png */,
@@ -1163,6 +1166,7 @@
 				635D112C104A846400D34A87 /* PreferencesWindow.xib in Resources */,
 				635D112E104A847300D34A87 /* PlaylistDebugWindow.xib in Resources */,
 				635D1176104A8A8B00D34A87 /* SplashScreenWindow.xib in Resources */,
+				3270EE151088BCD700B1424E /* errorImage.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
